@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Portfolio</title>
+  <style>
+
+</style>
+  <link rel="stylesheet" href="styles.css" />
+  <style>html { scroll-behavior: smooth; }</style>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+ <div id="loader"></div>
+  <nav>
+    <div class="logo">SHAILESH KUMAR GUPTA</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>HI, I'M <span id="typed"></span></h1>
+    <p>Crafting Code. Solving Problems. Learning Everyday.</p>
+    <a href="#contact" class="btn">Let's Connect</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Shailesh, a dedicated and curious Computer Science student with a strong passion for coding and problem-solving. I enjoy writing clean and logical code, exploring data structures & algorithms, and participating in hackathons and competitive programming to sharpen my skills.
+<br>
+I believe in continuous learning and love the thrill of solving challenging problems. Whether it's optimizing a piece of code or learning a new concept, I always push myself to go a step further and think beyond the usual.
+<br>
+Currently, I’m focused on building a solid foundation in C++, DSA, and exploring real-world problems through tech. My goal is to become a skilled programmer who can contribute meaningfully to innovative projects and tech communities.
+
+
+    </p>
+  </section>
+
+  <section id="education">
+  <h2>My Education</h2>
+  <div class="edu-timeline">
+    <div class="edu-card">
+      <h3>Class 10th – CBSE (2022-23)</h3>
+      <p>Secured 70% with a strong foundation in Information Technology and digital concepts. Developed early interest in computers, coding, and problem-solving.</p>
+    </div>
+    <div class="edu-card">
+      <h3>Class 12th – CBSE (2024-25)</h3>
+      <p>Completed with 65% in the PCM stream. Secured 65 out of 70 in Information Practices, showcasing strong command in programming fundamentals and data handling.</p>
+    </div>
+    <div class="edu-card">
+      <h3>B.Tech – Computer Science Engineering</h3>
+      <p>Currently pursuing 1st year at Rungta College of Engineering and Technology (RCET), with a strong focus on full-stack development, data structures, and core computer science fundamentals.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div><i class="fab fa-python"></i><p>Python</p></div>
+      <div><i class="fab fa-github"></i><p>Git/GitHub</p></div>
+      <div><i class="fab fa-linux"></i><p>Linux</p></div>
+      <div><i class="devicon-cplusplus-plain"></i><p>C++</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s work together. Reach me via:</p>
+
+    <form action="https://formsubmit.co/MR-BRAIN-shailesh@proton.me" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="phone" name="phone" placeholder="Your phone number*">
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+    <div class="contact-icons">
+      <a href="https://github.com/Shailesh-02022006" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/shailesh-kumar-gupta-44490a25a" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/_shailesh.0510__/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/virtual_1309?t=pZHRhVGsGjfbXPSm62gDzQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  
+
+
+
+
+  <section id="quote">
+  <h2>Quote of the Day</h2>
+  <p id="quote-text">Loading quote...</p>
+</section>
+
+
+  <footer>
+    <p>© 2025 SHAILESH | DESIGN BY MIND 😎</p>
+  </footer>
+
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["SHAILESH", "A STUDENT", "A DEVELOPER", "A CODER", "A PROGRAMMER", "A LAZY GENIUS", "A COMBO OF TALENT + HARDWORK"],
+      typeSpeed: 80,
+      backSpeed: 60,
+      loop: true
+    });
+  </script>
+
+  <script>
+  window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+  });
+</script>
+
+<script>
+  fetch('https://api.quotable.io/random')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('quote-text').textContent = `"${data.content}" — ${data.author}`;
+  });
+</script>
+
+
+
+</body>
+</html>
